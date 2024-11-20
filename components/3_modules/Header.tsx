@@ -1,0 +1,38 @@
+import Image from "next/image";
+import React from "react";
+import { Separator } from "@/components/ui/separator";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import Link from "next/link";
+
+const Header = () => {
+  return (
+    <div className="w-full fixed top-0 bg-[background]">
+      <header className="flex justify-between items-center py-2 px-20">
+        <Image
+          src={"/HBLogo.png"}
+          alt=""
+          width={150}
+          height={150}
+          className=""
+        />
+        <div className="flex w-full max-w-80 ml-60 items-center space-x-2">
+          <Input type="text" placeholder="Cari di sini..." />
+          <Button type="submit">Cari</Button>
+        </div>
+        <nav className="flex justify-center items-center h-8 space-x-4 ml-2">
+          <Link href={"#hero"}>Kenalan denganku</Link>
+          <Separator className="w-[2px]" orientation="vertical" />
+          <Link href={"#education"}>Pendidikan</Link>
+          <Separator className="w-[2px]" orientation="vertical" />
+          <Link href={"#techStack"}>Teknologi</Link>
+          <Separator className="w-[2px]" orientation="vertical" />
+          <Link href={"#project"}>Proyek-proyek</Link>
+        </nav>
+      </header>
+      <Separator className="h-[2px]" />
+    </div>
+  );
+};
+
+export default Header;
