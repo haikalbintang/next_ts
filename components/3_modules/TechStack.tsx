@@ -1,18 +1,14 @@
 import React from "react";
 import Section from "../4_templates/Section";
 import Image from "next/image";
+import { Separator } from "../ui/separator";
 
 const TechStack = () => {
   const category1 = [
     {
       id: 1,
-      src: "/techStack/reactjs.svg",
-      label: "React",
-    },
-    {
-      id: 2,
-      src: "/techStack/nextjs2.svg",
-      label: "NEXT.js",
+      src: "/techStack/html5.svg",
+      label: "HTML",
     },
     {
       id: 3,
@@ -26,8 +22,18 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/html5.svg",
-      label: "HTML",
+      src: "/techStack/reactjs.svg",
+      label: "React",
+    },
+    {
+      id: 2,
+      src: "/techStack/nextjs2.svg",
+      label: "NEXT.js",
+    },
+    {
+      id: 1,
+      src: "/techStack/vitejs.svg",
+      label: "Vite",
     },
     {
       id: 1,
@@ -41,13 +47,13 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/postman.svg",
-      label: "Postman",
+      src: "/techStack/tailwindcss.svg",
+      label: "Tailwind CSS",
     },
     {
       id: 1,
-      src: "/techStack/python.svg",
-      label: "Python",
+      src: "/techStack/shadcnui.svg",
+      label: "shadcn",
     },
     {
       id: 1,
@@ -61,13 +67,8 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/shadcnui.svg",
-      label: "shadcn",
-    },
-    {
-      id: 1,
-      src: "/techStack/supabase.svg",
-      label: "Supabase",
+      src: "/techStack/python.svg",
+      label: "Python",
     },
     {
       id: 1,
@@ -76,17 +77,27 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/tailwindcss.svg",
-      label: "Tailwind CSS",
+      src: "/techStack/postman.svg",
+      label: "Postman",
     },
     {
       id: 1,
-      src: "/techStack/vitejs.svg",
-      label: "Vite",
+      src: "/techStack/supabase.svg",
+      label: "Supabase",
     },
   ];
 
   const category2 = [
+    {
+      id: 1,
+      src: "/techStack/vscode.svg",
+      label: "VS Code",
+    },
+    {
+      id: 1,
+      src: "/techStack/prettier.svg",
+      label: "Prettier",
+    },
     {
       id: 1,
       src: "/techstack/chrome.svg",
@@ -94,18 +105,8 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/canva.svg",
-      label: "Canva",
-    },
-    {
-      id: 1,
       src: "/techStack/edge.svg",
       label: "Edge",
-    },
-    {
-      id: 1,
-      src: "/techStack/figma.svg",
-      label: "Figma",
     },
     {
       id: 1,
@@ -119,13 +120,13 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/insomnia.svg",
-      label: "Insomnia",
+      src: "/techStack/figma.svg",
+      label: "Figma",
     },
     {
       id: 1,
-      src: "/techStack/jira.svg",
-      label: "Jira",
+      src: "/techStack/canva.svg",
+      label: "Canva",
     },
     {
       id: 1,
@@ -134,13 +135,13 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/miro.svg",
-      label: "Miro",
+      src: "/techStack/openai.svg",
+      label: "OpenAI",
     },
     {
       id: 1,
-      src: "/techStack/openai.svg",
-      label: "OpenAI",
+      src: "/techStack/insomnia.svg",
+      label: "Insomnia",
     },
     {
       id: 1,
@@ -149,18 +150,18 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/prettier.svg",
-      label: "Prettier",
+      src: "/techStack/jira.svg",
+      label: "Jira",
+    },
+    {
+      id: 1,
+      src: "/techStack/miro.svg",
+      label: "Miro",
     },
     {
       id: 1,
       src: "/techStack/slack.svg",
       label: "Slack",
-    },
-    {
-      id: 1,
-      src: "/techStack/vscode.svg",
-      label: "VS Code",
     },
   ];
 
@@ -229,48 +230,54 @@ const TechStack = () => {
 
   return (
     <>
-      <Section id={"techStack2"}>
+      {/* <Section id={"techStack2"}>
         <h1 className="text-center text-2xl">Teknologi</h1>
         <h2>Proficient: CSS, Vercel, Axios, RESTful API</h2>
         <h2>Familiar: FastAPI, Poetry, pytest</h2>
         <h2>Others: GIMP</h2>
-      </Section>
+      </Section> */}
       <Section id={"techStack"}>
         <h2 className="text-center text-2xl my-2">Teknologi</h2>
-        <h3 className="text-center text-xl my-2">Mahir</h3>
+        <h3 className="text-center text-xl my-2 pt-3">Mahir</h3>
         <div className="flex w-full">
-          <div className="flex flex-col w-2/3">
+          <div className="flex flex-col w-1/2">
             <h4 className="text-center text-lg my-2">Utama</h4>
             <ul className="flex flex-wrap">
               {category1.map((item) => (
                 <li
                   key={item.label}
-                  className="flex flex-col w-1/6 justify-center items-center gap-2 my-2"
+                  className="flex flex-col w-1/4 justify-center items-center gap-2 my-2"
                 >
                   <Image
                     src={item.src}
                     alt={item.label}
-                    width={60}
-                    height={60}
+                    width={30}
+                    height={30}
+                    className="h-auto w-auto"
                   />
                   <p>{item.label}</p>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="flex flex-col w-1/3">
+          <Separator
+            orientation="vertical"
+            className="w-[2px] h-[416px] mt-12 mx-2"
+          />
+          <div className="flex flex-col w-1/2">
             <h4 className="text-center text-lg my-2">Lainnya</h4>
             <ul className="flex flex-wrap">
               {category2.map((item) => (
                 <li
                   key={item.label}
-                  className="flex flex-col w-1/3 justify-center items-center gap-2 my-2"
+                  className="flex flex-col w-1/4 justify-center items-center gap-2 my-2"
                 >
                   <Image
                     src={item.src}
                     alt={item.label}
                     width={60}
                     height={60}
+                    className="h-auto w-auto"
                   />
                   <p>{item.label}</p>
                 </li>
@@ -278,7 +285,7 @@ const TechStack = () => {
             </ul>
           </div>
         </div>
-        <h3 className="text-center text-xl my-2">Familiar</h3>
+        <h3 className="text-center text-xl my-2 pt-3">Familiar</h3>
         <div className="flex w-full">
           <div className="w-1/6"></div>
           <div className="flex flex-col w-2/3">
@@ -293,6 +300,7 @@ const TechStack = () => {
                     alt={item.label}
                     width={60}
                     height={60}
+                    className="h-auto w-auto"
                   />
                   <p>{item.label}</p>
                 </li>

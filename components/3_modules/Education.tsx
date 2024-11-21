@@ -1,37 +1,136 @@
+"use client";
+
 import React from "react";
 import Section from "../4_templates/Section";
 import Image from "next/image";
+import { ProgressBar } from "../2_widgets/ProgressBar";
+// import { initializeFlashlightEffect } from "@/lib/initializeFlashlightEffect";
 
 const Education = () => {
   return (
     <Section id="education">
       <h2 className="text-center text-2xl mb-4">Pendidikan</h2>
-      <ol className="grid grid-cols-6 grid-rows-1">
-        <li className="flex flex-col justify-center items-center text-center">
-          <Image src={"/education/TK.png"} alt="" width={150} height={150} />
+      <ol className="grid grid-cols-6 grid-rows-1 mb-5">
+        <li className="flex flex-col justify-center items-center text-center gap-2">
+          <div className="relative w-28 h-28">
+            <Image
+              src={"/education/tk.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="grayscale-image"
+            />
+            <Image
+              src={"/education/tk.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="color-image"
+            />
+          </div>
           <h3>TK Nurul Iman</h3>
         </li>
         <li className="flex flex-col justify-center items-center text-center gap-2">
-          <Image src={"/education/sd.png"} alt="" width={106} height={106} />
+          <div className="relative w-28 h-28">
+            <Image
+              src={"/education/sd.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="grayscale-image"
+              priority={false}
+            />
+            <Image
+              src={"/education/sd.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="color-image"
+              priority={false}
+            />
+          </div>
           <h3>SD Putra Jaya</h3>
         </li>
         <li className="flex flex-col justify-center items-center text-center gap-2">
-          <Image src={"/bangor.png"} alt="" width={120} height={120} />
+          <div className="relative w-28 h-28">
+            <Image
+              src={"/education/bangor.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="grayscale-image"
+            />
+            <Image
+              src={"/education/bangor.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="color-image"
+            />
+          </div>
           <h3>SMPN 2 Depok</h3>
         </li>
         <li className="flex flex-col justify-center items-center text-center gap-2">
-          <Image src={"/smansa.png"} alt="" width={110} height={110} />
+          <div className="relative w-28 h-28">
+            <Image
+              src={"/education/smansa.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="grayscale-image"
+            />
+            <Image
+              src={"/education/smansa.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="color-image"
+            />
+          </div>
           <h3>SMAN 1 Depok</h3>
         </li>
-        <li className="flex flex-col justify-center items-center text-center gap-3">
-          <Image src={"/UI.png"} alt="" width={110} height={110} />
+        <li className="flex flex-col justify-center items-center text-center gap-2">
+          <div className="relative w-28 h-28">
+            <Image
+              src={"/education/UI.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="grayscale-image"
+            />
+            <Image
+              src={"/education/UI.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="color-image"
+            />
+          </div>
           <h3>Fakultas Kedokteran UI</h3>
         </li>
         <li className="flex flex-col justify-center items-center text-center gap-1">
-          <Image src={"/revou.png"} alt="" width={100} height={100} />
-          <h3>RevoU Full-Stack Software Engineering</h3>
+          <div className="relative w-28 h-28">
+            <Image
+              src={"/education/revou.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="grayscale-image"
+            />
+            <Image
+              src={"/education/revou.png"}
+              alt=""
+              width={112}
+              height={112}
+              className="color-image"
+            />
+          </div>
+          <h3>
+            RevoU Full-Stack <br /> Software Engineering
+          </h3>
         </li>
       </ol>
+      <ProgressBar />
     </Section>
   );
 };
