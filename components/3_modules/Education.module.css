@@ -1,0 +1,30 @@
+.section {
+  position: relative;
+  width: 100%;
+  /* height: 500px; */
+  overflow: hidden;
+}
+
+/* Grayscale */
+.grayscale {
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+/* No grayscale */
+.noGrayscale {
+  filter: none;
+  transition: filter 0.3s;
+}
+
+/* Flashlight */
+.flashlight {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}

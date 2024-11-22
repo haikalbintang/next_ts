@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/3_modules/Header";
 import Footer from "@/components/3_modules/Footer";
-import FlashlightProvider from "@/components/1_elements/FlashlightProvider";
+// import FlashlightProvider from "@/components/1_elements/FlashlightProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,8 +42,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <FlashlightProvider />
-          <div className="max-w-[1200px] mx-auto">{children}</div>
+          {/* <FlashlightProvider /> */}
+          {/* <div className="max-w-[1200px] mx-auto">{children}</div> */}
+          <div className="mx-auto">{children}</div>
           <Footer />
         </ThemeProvider>
       </body>

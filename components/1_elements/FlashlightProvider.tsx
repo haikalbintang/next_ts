@@ -1,15 +1,15 @@
-"use client";
+// "use client";
 
-import { useEffect } from "react";
-import { initializeFlashlightEffect } from "@/lib/flashlightEffect";
+// import { useEffect } from "react";
+// import { initializeFlashlightEffect } from "@/lib/flashlightEffect";
 
-const FlashlightProvider = () => {
-  useEffect(() => {
-    const cleanup = initializeFlashlightEffect();
-    return cleanup;
-  }, []);
+// const FlashlightProvider = () => {
+//   useEffect(() => {
+//     const cleanup = initializeFlashlightEffect();
+//     return cleanup;
+//   }, []);
 
-  return null;
-};
+//   return null;
+// };
 
-export default FlashlightProvider;
+// export default FlashlightProvider;

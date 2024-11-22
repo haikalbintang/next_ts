@@ -100,7 +100,7 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techstack/chrome.svg",
+      src: "/techstack/color/chrome/chrome.svg",
       label: "Chrome",
     },
     {
@@ -125,7 +125,7 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/canva.svg",
+      src: "/techStack/color/canva/canva.svg",
       label: "Canva",
     },
     {

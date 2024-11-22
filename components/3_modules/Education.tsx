@@ -1,137 +1,173 @@
 "use client";
 
-import React from "react";
-import Section from "../4_templates/Section";
+import React from "react"; // useState, // , { useEffect, useRef }
+// import Section from "../4_templates/Section";
 import Image from "next/image";
 import { ProgressBar } from "../2_widgets/ProgressBar";
-// import { initializeFlashlightEffect } from "@/lib/initializeFlashlightEffect";
+// import { initializeFlashlightEffect } from "@/lib/flashlightEffect";
+// import styles from "@/components/3_modules/Education.module.css";
 
 const Education = () => {
+  // const sectionRef = useRef<HTMLElement>(null);
+
+  // useEffect(() => {
+  //   if (!sectionRef.current) return;
+
+  //   const cleanup = initializeFlashlightEffect({
+  //     container: sectionRef.current,
+  //     radius: 150,
+  //   });
+
+  //   return cleanup; // Cleanup on component unmount
+  // }, []);
+
+  // const [isColor, setIsColor] = useState(false);
+
+  // const handleMouseEnter = () => {
+  //   setIsColor(true); // Remove grayscale on hover
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsColor(false); // Apply grayscale again
+  // };
   return (
-    <Section id="education">
-      <h2 className="text-center text-2xl mb-4">Pendidikan</h2>
-      <ol className="grid grid-cols-6 grid-rows-1 mb-5">
-        <li className="flex flex-col justify-center items-center text-center gap-2">
-          <div className="relative w-28 h-28">
-            <Image
+    <div
+    // className={isColor ? styles.noGrayscale : styles.grayscale}
+    // onMouseEnter={handleMouseEnter}
+    // onMouseLeave={handleMouseLeave}
+    >
+      <section
+        // ref={sectionRef}
+        // className={styles.section}
+        id="education"
+      >
+        <div className={`grayscale-component`}>
+          <h2 className="text-center text-2xl mb-4">Pendidikan</h2>
+          <ol className="grid grid-cols-6 grid-rows-1 mb-5">
+            <li className="flex flex-col justify-center items-center text-center gap-2">
+              <div className="relative w-28 h-28">
+                {/* <Image
               src={"/education/tk.png"}
               alt=""
               width={112}
               height={112}
               className="grayscale-image"
-            />
-            <Image
-              src={"/education/tk.png"}
-              alt=""
-              width={112}
-              height={112}
-              className="color-image"
-            />
-          </div>
-          <h3>TK Nurul Iman</h3>
-        </li>
-        <li className="flex flex-col justify-center items-center text-center gap-2">
-          <div className="relative w-28 h-28">
-            <Image
+            /> */}
+                <Image
+                  src={"/education/tk.png"}
+                  alt=""
+                  width={112}
+                  height={112}
+                  className="grayscale"
+                />
+              </div>
+              <h3>TK Nurul Iman</h3>
+            </li>
+            <li className="flex flex-col justify-center items-center text-center gap-2">
+              <div className="relative w-28 h-28">
+                {/* <Image
               src={"/education/sd.png"}
               alt=""
               width={112}
               height={112}
               className="grayscale-image"
               priority={false}
-            />
-            <Image
-              src={"/education/sd.png"}
-              alt=""
-              width={112}
-              height={112}
-              className="color-image"
-              priority={false}
-            />
-          </div>
-          <h3>SD Putra Jaya</h3>
-        </li>
-        <li className="flex flex-col justify-center items-center text-center gap-2">
-          <div className="relative w-28 h-28">
-            <Image
+            /> */}
+                <Image
+                  src={"/education/sd.png"}
+                  alt=""
+                  width={112}
+                  height={112}
+                  className="grayscale"
+                  // className="color-image"
+                  priority={false}
+                />
+              </div>
+              <h3>SD Putra Jaya</h3>
+            </li>
+            <li className="flex flex-col justify-center items-center text-center gap-2">
+              <div className="relative w-28 h-28">
+                {/* <Image
               src={"/education/bangor.png"}
               alt=""
               width={112}
               height={112}
               className="grayscale-image"
-            />
-            <Image
-              src={"/education/bangor.png"}
-              alt=""
-              width={112}
-              height={112}
-              className="color-image"
-            />
-          </div>
-          <h3>SMPN 2 Depok</h3>
-        </li>
-        <li className="flex flex-col justify-center items-center text-center gap-2">
-          <div className="relative w-28 h-28">
-            <Image
+            /> */}
+                <Image
+                  src={"/education/bangor.png"}
+                  alt=""
+                  width={112}
+                  height={112}
+                  // className="color-image"
+                />
+              </div>
+              <h3>SMPN 2 Depok</h3>
+            </li>
+            <li className="flex flex-col justify-center items-center text-center gap-2">
+              <div className="relative w-28 h-28">
+                {/* <Image
               src={"/education/smansa.png"}
               alt=""
               width={112}
               height={112}
               className="grayscale-image"
-            />
-            <Image
-              src={"/education/smansa.png"}
-              alt=""
-              width={112}
-              height={112}
-              className="color-image"
-            />
-          </div>
-          <h3>SMAN 1 Depok</h3>
-        </li>
-        <li className="flex flex-col justify-center items-center text-center gap-2">
-          <div className="relative w-28 h-28">
-            <Image
+            /> */}
+                <Image
+                  src={"/education/smansa.png"}
+                  alt=""
+                  width={112}
+                  height={112}
+                  // className="color-image"
+                />
+              </div>
+              <h3>SMAN 1 Depok</h3>
+            </li>
+            <li className="flex flex-col justify-center items-center text-center gap-2">
+              <div className="relative w-28 h-28">
+                {/* <Image
               src={"/education/UI.png"}
               alt=""
               width={112}
               height={112}
               className="grayscale-image"
-            />
-            <Image
-              src={"/education/UI.png"}
-              alt=""
-              width={112}
-              height={112}
-              className="color-image"
-            />
-          </div>
-          <h3>Fakultas Kedokteran UI</h3>
-        </li>
-        <li className="flex flex-col justify-center items-center text-center gap-1">
-          <div className="relative w-28 h-28">
-            <Image
+            /> */}
+                <Image
+                  src={"/education/UI.png"}
+                  alt=""
+                  width={112}
+                  height={112}
+                  // className="color-image"
+                />
+              </div>
+              <h3>Fakultas Kedokteran UI</h3>
+            </li>
+            <li className="flex flex-col justify-center items-center text-center gap-1">
+              <div className="relative w-28 h-28">
+                {/* <Image
               src={"/education/revou.png"}
               alt=""
               width={112}
               height={112}
               className="grayscale-image"
-            />
-            <Image
-              src={"/education/revou.png"}
-              alt=""
-              width={112}
-              height={112}
-              className="color-image"
-            />
-          </div>
-          <h3>
-            RevoU Full-Stack <br /> Software Engineering
-          </h3>
-        </li>
-      </ol>
-      <ProgressBar />
-    </Section>
+            /> */}
+                <Image
+                  src={"/education/revou.png"}
+                  alt=""
+                  width={112}
+                  height={112}
+                  // className="color-image"
+                />
+              </div>
+              <h3>
+                RevoU Full-Stack <br /> Software Engineering
+              </h3>
+            </li>
+          </ol>
+          <ProgressBar />
+        </div>
+      </section>
+    </div>
   );
 };
 
