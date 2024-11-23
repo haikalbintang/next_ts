@@ -1,11 +1,6 @@
-"use client";
-
-import React from "react"; // useState, // , { useEffect, useRef }
-// import Section from "../4_templates/Section";
+import React from "react";
 import Image from "next/image";
 import { ProgressBar } from "../2_widgets/ProgressBar";
-// import { initializeFlashlightEffect } from "@/lib/flashlightEffect";
-// import styles from "@/components/3_modules/Education.module.css";
 
 const Education = () => {
   return (

@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import HeroWrapper from "../4_templates/HeroWrapper";
+import Image from "next/image";
+import styles from "./Hero.module.css";
 
 const Hero = () => {
   return (
@@ -8,8 +10,10 @@ const Hero = () => {
       <div className="flex justify-around items-center min-h-screen -mb-20">
         <div className="flex flex-col justify-around items h-full gap-20">
           <div>
-            <h1 className="text-5xl">
-              Muhammad Haikal <span>Bintang</span>
+            <h1 className={`text-5xl`}>
+              <span className={styles["text-shadow-white"]}>Muhammad</span>{" "}
+              <span className="text-yellow-800">Haikal</span>{" "}
+              <span className="text-yellow-600">Bintang</span>
             </h1>
             <h3>
               <span className="italic">
@@ -23,7 +27,15 @@ const Hero = () => {
             <Button>Colek aku</Button>
           </div>
         </div>
-        <div className="bg-white rounded-lg h-[500px] w-[350px]"></div>
+        <div className="rounded-lg h-[500px] w-[350px]">
+          <Image
+            src={"/hero/profilePicture.jpg"}
+            alt=""
+            width={350}
+            height={500}
+            className="rounded-lg object-cover"
+          />
+        </div>
       </div>
     </HeroWrapper>
   );
