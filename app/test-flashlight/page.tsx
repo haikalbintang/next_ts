@@ -10,7 +10,7 @@ import classNames from "classnames";
 
 export default function TestFlashLight() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [flashlightSize, setFlashlightSize] = useState(300);
+  const [flashlightSize, setFlashlightSize] = useState(170);
 
   const MAX_WIDTH = 1280;
 
@@ -39,11 +39,11 @@ export default function TestFlashLight() {
       // Adjust flashlight size based on the window width
       if (screenWidth > MAX_WIDTH) {
         // Calculate size proportionately to the window size
-        const newSize = (screenWidth / MAX_WIDTH) * 300; // 200px is the base size
+        const newSize = (screenWidth / MAX_WIDTH) * 170; // 170px is the base size
         setFlashlightSize(newSize);
       } else {
         // Default flashlight size if screen width is smaller than MAX_WIDTH
-        setFlashlightSize(300);
+        setFlashlightSize(170);
       }
     };
 
@@ -60,41 +60,53 @@ export default function TestFlashLight() {
     };
   }, []);
   return (
-    // <div className="flex items-center justify-center min-h-screen bg-gray-900">
-    //   <div className="relative w-full max-w-screen-xl overflow-hidden">
-    <>
-      <div className="relative w-full overflow-hidden">
+    <div className="flex items-center justify-center min-h-screen bg-zinc-800">
+      <div className="relative w-full overflow-hidden mx-auto">
         {/* Grayscale Content */}
         <div
           className={classNames(
             "absolute inset-0 z-10 filter grayscale pointer-events-none"
           )}
           style={{
-            maskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, transparent ${flashlightSize}px, rgba(0, 0, 0, 0.9) ${flashlightSize}px)`,
-            WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, transparent ${flashlightSize}px, rgba(0, 0, 0, 0.9) ${flashlightSize}px)`,
+            background: `radial-gradient(circle at ${mousePosition.x}px ${
+              mousePosition.y
+            }px, transparent ${flashlightSize}px, rgba(0, 0, 0, 0.9) ${
+              flashlightSize + 50
+            }px)`,
+            maskImage: `radial-gradient(circle at ${mousePosition.x}px ${
+              mousePosition.y
+            }px, transparent ${flashlightSize}px, rgba(0, 0, 0, 0.9) ${
+              flashlightSize + 50
+            }px)`,
+            WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}px ${
+              mousePosition.y
+            }px, transparent ${flashlightSize}px, rgba(0, 0, 0, 0.9) ${
+              flashlightSize + 50
+            }px)`,
           }}
         >
-          <Main>
-            <Hero />
-            <Education />
-            <TechStack />
-            <Project />
-          </Main>
+          <div className="max-w-[1200px] mx-auto">
+            <Main>
+              <Hero />
+              <Education />
+              <TechStack />
+              <Project />
+            </Main>
+          </div>
         </div>
 
         {/* Colored Content */}
-        <div className="relative z-0">
-          <Main>
-            <Hero />
-            <Education />
-            <TechStack />
-            <Project />
-          </Main>
+        <div className="relative z-0 bg-zinc-800">
+          <div className="max-w-[1200px] mx-auto">
+            <Main>
+              <Hero />
+              <Education />
+              <TechStack />
+              <Project />
+            </Main>
+          </div>
         </div>
       </div>
-      {/* </div> */}
-    </>
-    //   </div>
-    // </div>
+    </div>
   );
 }
