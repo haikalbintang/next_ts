@@ -16,22 +16,11 @@ export default function TestFlashLight() {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const mainContainer = document.querySelector("main"); // Assuming 'Main' is a <main> element
-
-      if (mainContainer) {
-        const rect = mainContainer.getBoundingClientRect(); // Get the container's position relative to the viewport
-        const xAxis = e.clientX - rect.left; // Mouse X relative to the container
-        const yAxis = e.clientY - rect.top; // Mouse Y relative to the container
-
-        setMousePosition({
-          x: xAxis, // No need to add window.scrollX as rect.left includes scrolling
-          y: yAxis, // No need to add window.scrollY as rect.top includes scrolling
-        });
-      }
+      setMousePosition({
+        x: e.clientX + window.scrollX, // Add horizontal scroll offset
+        y: e.clientY + window.scrollY, // Add vertical scroll offset
+      });
     };
-
-    // Listen for mouse movement
-    window.addEventListener("mousemove", handleMouseMove);
 
     // Handle window resize to adjust flashlight size
     const handleResize = () => {
@@ -46,6 +35,9 @@ export default function TestFlashLight() {
         setFlashlightSize(170);
       }
     };
+
+    // Listen for mouse movement
+    window.addEventListener("mousemove", handleMouseMove);
 
     // Attach resize event listener
     window.addEventListener("resize", handleResize);
