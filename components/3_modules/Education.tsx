@@ -21,6 +21,7 @@ const Education = () => {
                   alt=""
                   width={112}
                   height={112}
+                  priority={false}
                 />
               </div>
               <h3>TK Nurul Iman</h3>
