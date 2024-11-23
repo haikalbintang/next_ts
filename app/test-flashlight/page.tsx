@@ -6,6 +6,7 @@ import Project from "@/components/3_modules/Project";
 import TechStack from "@/components/3_modules/TechStack";
 import Main from "@/components/4_templates/Main";
 import { useEffect, useState } from "react";
+import classNames from "classnames";
 
 export default function TestFlashLight() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -59,28 +60,41 @@ export default function TestFlashLight() {
     };
   }, []);
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
-      <div className="relative w-full max-w-screen-xl grayscale">
-        <Main>
-          <Hero />
-          <Education />
-          <TechStack />
-          <Project />
-          <div
-            className="pointer-events-none absolute z-10"
-            style={{
-              left: `${mousePosition.x}px`,
-              top: `${mousePosition.y}px`,
-              width: `${flashlightSize}px`, // Adjusted size of flashlight based on the window width
-              height: `${flashlightSize}px`,
-              borderRadius: "50%",
-              backgroundColor: "rgba(255, 255, 255, 0.1)", // Create the light spot effect
-              transform: "translate(-50%, -50%)", // Center the flashlight on the cursor
-              mixBlendMode: "normal", // Normal blend mode to reveal original color
-            }}
-          ></div>
-        </Main>
+    // <div className="flex items-center justify-center min-h-screen bg-gray-900">
+    //   <div className="relative w-full max-w-screen-xl overflow-hidden">
+    <>
+      <div className="relative w-full overflow-hidden">
+        {/* Grayscale Content */}
+        <div
+          className={classNames(
+            "absolute inset-0 z-10 filter grayscale pointer-events-none"
+          )}
+          style={{
+            maskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, transparent ${flashlightSize}px, rgba(0, 0, 0, 0.9) ${flashlightSize}px)`,
+            WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, transparent ${flashlightSize}px, rgba(0, 0, 0, 0.9) ${flashlightSize}px)`,
+          }}
+        >
+          <Main>
+            <Hero />
+            <Education />
+            <TechStack />
+            <Project />
+          </Main>
+        </div>
+
+        {/* Colored Content */}
+        <div className="relative z-0">
+          <Main>
+            <Hero />
+            <Education />
+            <TechStack />
+            <Project />
+          </Main>
+        </div>
       </div>
-    </div>
+      {/* </div> */}
+    </>
+    //   </div>
+    // </div>
   );
 }
