@@ -17,8 +17,8 @@ export default function TestFlashLight() {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({
-        x: e.clientX + window.scrollX, // Add horizontal scroll offset
-        y: e.clientY + window.scrollY, // Add vertical scroll offset
+        x: e.clientX + window.scrollX - 20, // Add horizontal scroll offset
+        y: e.clientY + window.scrollY - 30, // Add vertical scroll offset
       });
     };
 
