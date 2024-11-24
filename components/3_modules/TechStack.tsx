@@ -7,82 +7,82 @@ const TechStack = () => {
   const category1 = [
     {
       id: 1,
-      src: "/techStack/html5.svg",
+      src: "/techStack/color/html5.svg",
       label: "HTML",
     },
     {
+      id: 1,
+      src: "/techStack/color/css3.svg",
+      label: "CSS",
+    },
+    {
       id: 3,
-      src: "/techStack/js.svg",
+      src: "/techStack/color/js.svg",
       label: "JavaScript",
     },
     {
       id: 4,
-      src: "/techStack/typescript.svg",
+      src: "/techStack/color/typescript/typescript.svg",
       label: "TypeScript",
     },
     {
       id: 1,
-      src: "/techStack/reactjs.svg",
+      src: "/techStack/color/reactjs/reactjs.svg",
       label: "React",
     },
     {
+      id: 1,
+      src: "/techStack/color/vitejs/vitejs.svg",
+      label: "Vite",
+    },
+    {
       id: 2,
-      src: "/techStack/nextjs2.svg",
+      src: "/techStack/color/nextjs2/nextjs2.svg",
       label: "NEXT.js",
     },
     {
       id: 1,
-      src: "/techStack/vitejs.svg",
-      label: "Vite",
-    },
-    {
-      id: 1,
-      src: "/techStack/nodejs.svg",
-      label: "Node.js",
-    },
-    {
-      id: 1,
-      src: "/techStack/npm2.svg",
-      label: "NPM",
-    },
-    {
-      id: 1,
-      src: "/techStack/tailwindcss.svg",
+      src: "/techStack/color/tailwindcss/tailwindcss.svg",
       label: "Tailwind CSS",
     },
     {
       id: 1,
-      src: "/techStack/shadcnui.svg",
+      src: "/techStack/color/nodejs/nodejs.svg",
+      label: "Node.js",
+    },
+    {
+      id: 1,
+      src: "/techStack/color/npm2/npm2.svg",
+      label: "NPM",
+    },
+    {
+      id: 1,
+      src: "/techStack/color/shadcnui/shadcnui.svg",
       label: "shadcn",
     },
     {
       id: 1,
-      src: "/techStack/reactrouter.svg",
+      src: "/techStack/color/reactrouter/reactrouter.svg",
       label: "React Router",
     },
     {
       id: 1,
-      src: "/techStack/redux.svg",
+      src: "/techStack/color/redux/redux.svg",
       label: "Redux",
     },
     {
       id: 1,
-      src: "/techStack/python.svg",
+      src: "/techStack/color/python/python.svg",
       label: "Python",
     },
     {
       id: 1,
-      src: "/techStack/swagger.svg",
-      label: "Swagger",
-    },
-    {
-      id: 1,
-      src: "/techStack/postman.svg",
+      src: "/techStack/color/postman/postman.svg",
       label: "Postman",
     },
     {
       id: 1,
-      src: "/techStack/supabase.svg",
+      src: "/techStack/color/supabase/supabase.svg",
       label: "Supabase",
     },
   ];
@@ -90,12 +90,12 @@ const TechStack = () => {
   const category2 = [
     {
       id: 1,
-      src: "/techStack/vscode.svg",
+      src: "/techStack/color/vscode/vscode.svg",
       label: "VS Code",
     },
     {
       id: 1,
-      src: "/techStack/prettier.svg",
+      src: "/techStack/color/prettier/prettier.svg",
       label: "Prettier",
     },
     {
@@ -105,22 +105,22 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/edge.svg",
+      src: "/techStack/color/edge.svg",
       label: "Edge",
     },
     {
       id: 1,
-      src: "/techStack/git.svg",
+      src: "/techStack/color/git.svg",
       label: "Git",
     },
     {
       id: 1,
-      src: "/techStack/github.svg",
+      src: "/techStack/color/github.svg",
       label: "GitHub",
     },
     {
       id: 1,
-      src: "/techStack/figma.svg",
+      src: "/techStack/color/figma.svg",
       label: "Figma",
     },
     {
@@ -130,37 +130,42 @@ const TechStack = () => {
     },
     {
       id: 1,
-      src: "/techStack/markdown.svg",
+      src: "/techStack/color/markdown/markdown.svg",
       label: "Markdown",
     },
     {
       id: 1,
-      src: "/techStack/openai.svg",
+      src: "/techStack/color/openai/openai.svg",
       label: "OpenAI",
     },
     {
       id: 1,
-      src: "/techStack/insomnia.svg",
+      src: "/techStack/color/insomnia.svg",
       label: "Insomnia",
     },
     {
       id: 1,
-      src: "/techStack/netlify2.svg",
+      src: "/techStack/color/swagger/swagger.svg",
+      label: "Swagger",
+    },
+    {
+      id: 1,
+      src: "/techStack/color/netlify2/netlify2.svg",
       label: "Netlify",
     },
     {
       id: 1,
-      src: "/techStack/jira.svg",
+      src: "/techStack/color/jira.svg",
       label: "Jira",
     },
     {
       id: 1,
-      src: "/techStack/miro.svg",
+      src: "/techStack/color//miro/miro.svg",
       label: "Miro",
     },
     {
       id: 1,
-      src: "/techStack/slack.svg",
+      src: "/techStack/color/slack/slack.svg",
       label: "Slack",
     },
   ];
@@ -168,62 +173,62 @@ const TechStack = () => {
   const category3 = [
     {
       id: 1,
-      src: "/techStack/docker.svg",
+      src: "/techStack/color/docker.svg",
       label: "Docker",
     },
     {
       id: 1,
-      src: "/techStack/electron.svg",
+      src: "/techStack/color/electron.svg",
       label: "Electron.js",
     },
     {
       id: 1,
-      src: "/techStack/flask.svg",
+      src: "/techStack/color/flask.svg",
       label: "Flask",
     },
     {
       id: 1,
-      src: "/techStack/jest.svg",
+      src: "/techStack/color/jest.svg",
       label: "Jest",
     },
     {
       id: 1,
-      src: "/techStack/mongodb.svg",
+      src: "/techStack/color/mongodb/mongodb.svg",
       label: "MongoDB",
     },
     {
       id: 1,
-      src: "/techStack/mysql.svg",
+      src: "/techStack/color/mysql/mysql.svg",
       label: "MySQL",
     },
     {
       id: 1,
-      src: "/techStack/php.svg",
+      src: "/techStack/color/php/php.svg",
       label: "PHP",
     },
     {
       id: 1,
-      src: "/techStack/postgresql.svg",
+      src: "/techStack/color/postgresql/postgresql.svg",
       label: "PostgreSQL",
     },
     {
       id: 1,
-      src: "/techStack/reactquery.svg",
+      src: "/techStack/color/reactquery/reactquery.svg",
       label: "React Query",
     },
     {
       id: 1,
-      src: "/techStack/sass.svg",
+      src: "/techStack/color/sass/sass.svg",
       label: "SASS",
     },
     {
       id: 1,
-      src: "/techStack/threejs.svg",
+      src: "/techStack/color/threejs/threejs.svg",
       label: "Three.js",
     },
     {
       id: 1,
-      src: "/techStack/zod.svg",
+      src: "/techStack/color/zod/zod.svg",
       label: "Zod",
     },
   ];
@@ -251,9 +256,9 @@ const TechStack = () => {
                   <Image
                     src={item.src}
                     alt={item.label}
-                    width={30}
-                    height={30}
-                    className="h-auto w-auto"
+                    width={60}
+                    height={60}
+                    className=""
                   />
                   <p>{item.label}</p>
                 </li>
@@ -277,7 +282,7 @@ const TechStack = () => {
                     alt={item.label}
                     width={60}
                     height={60}
-                    className="h-auto w-auto"
+                    className=""
                   />
                   <p>{item.label}</p>
                 </li>
@@ -300,7 +305,7 @@ const TechStack = () => {
                     alt={item.label}
                     width={60}
                     height={60}
-                    className="h-auto w-auto"
+                    className=""
                   />
                   <p>{item.label}</p>
                 </li>

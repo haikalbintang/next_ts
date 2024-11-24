@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/3_modules/Header";
 import Footer from "@/components/3_modules/Footer";
-// import FlashlightProvider from "@/components/1_elements/FlashlightProvider";
+import { Anta } from "@next/font/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,6 +15,10 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+const anta = Anta({
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +37,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/iconHB32.png" type="image/x-icon" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${anta.className} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -42,8 +46,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {/* <FlashlightProvider /> */}
-          {/* <div className="max-w-[1200px] mx-auto">{children}</div> */}
           <div className="mx-auto">{children}</div>
           <Footer />
         </ThemeProvider>

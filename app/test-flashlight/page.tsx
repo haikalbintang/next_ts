@@ -10,7 +10,7 @@ import classNames from "classnames";
 
 export default function TestFlashLight() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [flashlightSize, setFlashlightSize] = useState(170);
+  const [flashlightSize, setFlashlightSize] = useState(150);
 
   const MAX_WIDTH = 1280;
 
@@ -28,11 +28,11 @@ export default function TestFlashLight() {
       // Adjust flashlight size based on the window width
       if (screenWidth > MAX_WIDTH) {
         // Calculate size proportionately to the window size
-        const newSize = (screenWidth / MAX_WIDTH) * 170; // 170px is the base size
+        const newSize = (screenWidth / MAX_WIDTH) * 150; // 150px is the base size
         setFlashlightSize(newSize);
       } else {
         // Default flashlight size if screen width is smaller than MAX_WIDTH
-        setFlashlightSize(170);
+        setFlashlightSize(150);
       }
     };
 
@@ -62,18 +62,18 @@ export default function TestFlashLight() {
           style={{
             background: `radial-gradient(circle at ${mousePosition.x}px ${
               mousePosition.y
-            }px, transparent ${flashlightSize}px, rgba(0, 0, 0, 0.9) ${
-              flashlightSize + 50
+            }px, transparent ${flashlightSize}px, rgba(0, 0, 0, 1) ${
+              flashlightSize + 30
             }px)`,
             maskImage: `radial-gradient(circle at ${mousePosition.x}px ${
               mousePosition.y
-            }px, transparent ${flashlightSize}px, rgba(0, 0, 0, 0.9) ${
-              flashlightSize + 50
+            }px, transparent ${flashlightSize}px, rgba(0, 0, 0, 1) ${
+              flashlightSize + 30
             }px)`,
             WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}px ${
               mousePosition.y
-            }px, transparent ${flashlightSize}px, rgba(0, 0, 0, 0.9) ${
-              flashlightSize + 50
+            }px, transparent ${flashlightSize}px, rgba(0, 0, 0, 1) ${
+              flashlightSize + 30
             }px)`,
           }}
         >
@@ -88,7 +88,7 @@ export default function TestFlashLight() {
         </div>
 
         {/* Colored Content */}
-        <div className="relative z-0 bg-zinc-800">
+        <div className="relative z-0 bg-zinc-700">
           <div className="max-w-[1200px] mx-auto">
             <Main>
               <Hero />

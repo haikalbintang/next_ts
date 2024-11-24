@@ -9,14 +9,16 @@ const Header = () => {
   return (
     <div className="w-full fixed top-0 bg-[background] z-50">
       <header className="flex justify-between items-center py-2 px-20">
-        <Image
-          src={"/HBLogo.png"}
-          alt=""
-          width={100}
-          height={100}
-          className="h-auto w-auto"
-          priority={true}
-        />
+        <Link href={"/test-flashlight"}>
+          <Image
+            src={"/HBLogo.png"}
+            alt=""
+            width={100}
+            height={100}
+            className="h-auto w-auto"
+            priority={true}
+          />
+        </Link>
         <div className="flex w-full max-w-80 ml-60 items-center space-x-2">
           <Input type="text" placeholder="Cari di sini..." />
           <Button type="submit">Cari</Button>
