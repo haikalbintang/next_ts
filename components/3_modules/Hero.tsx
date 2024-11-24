@@ -5,7 +5,6 @@ import HeroWrapper from "../4_templates/HeroWrapper";
 import Image from "next/image";
 import styles from "./Hero.module.css";
 import { Anta } from "@next/font/google";
-import HoverButton from "../2_widgets/HoverButton";
 
 const anta = Anta({
   subsets: ["latin"],
